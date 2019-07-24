@@ -1,13 +1,13 @@
 {
   "name": "servicenet-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "main": "dist/server.js",
+  "main": "dist/src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsc-watch --onSuccess \"node ./dist/src/server.js\"",
     "start": "npm run serve",
-    "serve": "node dist/server.js"
+    "serve": "node dist/src/server.js"
   },
   "keywords": [],
   "author": "",
