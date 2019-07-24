@@ -8,7 +8,6 @@ const express_1 = __importDefault(require("express"));
 const services_1 = __importDefault(require("./services"));
 const middleware_1 = __importDefault(require("./middleware"));
 const errorHandlers_1 = __importDefault(require("./middleware/errorHandlers"));
-const environment_1 = require("../environment/environment");
 const utils_1 = require("./utils");
 process.on('uncaughtException', e => {
     console.log(e);
@@ -22,7 +21,7 @@ const router = express_1.default();
 utils_1.applyMiddleware(middleware_1.default, router);
 utils_1.applyRoutes(services_1.default, router);
 utils_1.applyMiddleware(errorHandlers_1.default, router);
-const PORT = environment_1.environment.server.port;
+const PORT = process.env.PORT || 3000;
 const server = http_1.default.createServer(router);
 server.listen(PORT, () => {
     console.log(`O servidor está rodando em: http://localhost:${PORT}`);
