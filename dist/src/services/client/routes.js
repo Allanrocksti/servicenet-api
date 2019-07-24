@@ -11,6 +11,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const queries_1 = require("../../queries");
 exports.default = [
     {
+        path: '/',
+        method: 'get',
+        handler: (req, res) => __awaiter(this, void 0, void 0, function* () {
+            res.status(200).json({ message: 'Bem vindo ao servidor da Servicenet' });
+        })
+    },
+    {
         path: '/clients/:id',
         method: 'get',
         handler: (req, res) => __awaiter(this, void 0, void 0, function* () {

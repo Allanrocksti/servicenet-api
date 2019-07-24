@@ -8,8 +8,6 @@ export const notFoundError = () => {
 
 export const clientError = (err: Error, res: Response, next: NextFunction) => {
     if (err instanceof HTTPClientError) {
-        console.log('oi1');
-        
         console.warn(err)
         res.status(err.statusCode).send(err.message)
     } else {

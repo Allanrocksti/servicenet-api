@@ -6,7 +6,6 @@ exports.notFoundError = () => {
 };
 exports.clientError = (err, res, next) => {
     if (err instanceof httpErrors_1.HTTPClientError) {
-        console.log('oi1');
         console.warn(err);
         res.status(err.statusCode).send(err.message);
     }
