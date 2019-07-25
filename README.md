@@ -42,8 +42,9 @@ create table client (
 ```
 $ cd <meu-workspace>
 $ git clone https://github.com/Allanrocksti/servicenet-api.git
+$ cd servicenet-api
 $ npm i
-$ npm dev start
+$ npm start
 ```
 ##### O app ficará acessível em [localhost:3000](localhost:3000)
 
